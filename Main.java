@@ -6,27 +6,27 @@ public class Main {
 	public static void main(String[] args) {
 		Scanner input = new Scanner(System.in);
 		int numOfPockets = -1;
-		
+
 		System.out.print("Enter Player 1's name: ");
 		String p1Name = input.nextLine();
-		
+
 		System.out.print("Enter Player 2's name: ");
 		String p2Name = input.nextLine();
-		
+
 		do {
 			System.out.print("Select a positive number of pockets (2 - n) ... Normal game is 6: ");
 			numOfPockets = input.nextInt();
-			
+
 		} while (numOfPockets <= 1);
-		
+
 		Player.spaces = numOfPockets;
-		
+
 		Player p1 = new Player(p1Name, 1);
 		Player p2 = new Player(p2Name, 2);
 
 		Board board = new Board(p1, p2);
 
-		System.out.println(board.toString());
+		System.out.println(board);
 
 		Player current = p1;
 
@@ -48,7 +48,7 @@ public class Main {
 				}
 			} while (b != 0);
 
-			System.out.println(board.toString());
+			System.out.println(board);
 			// System.out.println(board.altString());
 
 			if (current == p1)
