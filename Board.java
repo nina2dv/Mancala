@@ -76,7 +76,7 @@ public class Board {
 		for (int i = 0; i < Player.spaces; i++) {
 			result += String.format("-%d-\t", gameBoard[i].getPosition());
 		}
-		result += String.format("\nP1 Score: %d%sP2 Score: %d\n", player1.getScore(), "\t".repeat(Player.spaces),
+		result += String.format("\nP1 Score: %d%sP2 Score: %d\n", player1.getScore(), "\t".repeat(Player.spaces + 1),
 				player2.getScore());
 		result += "p2 side: \t";
 //		for (int i = 0; i < Player.spaces; i++) {
